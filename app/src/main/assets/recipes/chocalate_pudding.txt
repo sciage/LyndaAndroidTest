@@ -1,0 +1,3 @@
+id=chocolate_pudding
+title=Chocolate Pudding
+This is sample pudding

@@ -1,4 +1,4 @@
-package pg.safexpay.live.lyndaandroidtest.data;
+package pg.safexpay.live.lyndaandroidtest.data.model;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 
 public class Recipe {
     private static final String ID_PREFIX = "id=";
+    private static final String TITLE_PREFIX = "title=";
     public final String id;
     public final String title;
     public final String description;
@@ -27,6 +28,9 @@ public class Recipe {
             for (String line = bufferedReader.readLine(); line != null; line = bufferedReader.readLine())
                 if (line.startsWith(ID_PREFIX)){
                     id = line.substring(ID_PREFIX.length());
+                    continue;
+                } else if (line.startsWith(TITLE_PREFIX)){
+                    title = line.substring(TITLE_PREFIX.length());
                     continue;
                 }
         } catch (IOException e) {

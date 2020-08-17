@@ -1,3 +1,2 @@
 id=water
-title=water
-Put glass under tap
+title=Water
